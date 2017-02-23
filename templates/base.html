@@ -1,0 +1,72 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testeverything - {% block title %}{% endblock %}</title>
+    <link rel="icon" href="{% static 'images/logo.ico' %}"/>
+    <link rel="stylesheet" href="{% static 'css/semantic.min.css' %}"/>
+    <script type="text/javascript" src="{% static 'js/semantic.min.js' %}"></script>
+    <style>
+        .navbgcolor {
+            background-color: #346547;
+            color: #ffffff;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 3px;
+            padding-left: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="ui attached menu">s
+    <div class="header item"><h3><span style="color: #346547;">Testeverything</span></h3></div>
+    <a class="active item" href="/"><i class="home icon"></i> 社区主页 </a>
+    <div class="ui simple dropdown item">
+        <i class="book icon"></i>
+        文档教程
+        <i class="dropdown icon"></i>
+        <div class="menu">
+            <a class="item"><i class="tag icon"></i>Django教程</a>
+            <a class="item"><i class="tag icon"></i>Flask教程</a>
+            <a class="item"><i class="tag icon"></i>Tornado教程</a>
+            <a class="item"><i class="tag icon"></i>常用第三方库</a>
+            <a class="item"><i class="tag icon"></i>Web基础教学</a>
+            <a class="item"><i class="globe icon"></i>Web安全</a>
+        </div>
+    </div>
+    <a class="item" href="#"><i class="search icon"></i>问答服务 </a>
+    <a class="item" href="#"><i class="tasks icon"></i>学习项目 </a>
+    <a class="item" href="#"><i class="share alternate icon"></i>技术分享 </a>
+    <a class="item" href="#"><i class="paw icon"></i>社区支持 </a>
+    <div class="right menu">
+        <div class="ui category search item">
+            <div class="ui transparent icon input">
+                <input class="prompt" placeholder="搜索..." type="text">
+                <i class="search link icon"></i>
+            </div>
+            <div class="results"></div>
+        </div>
+        <a class="item">欢迎你，{{ user }}！</a>
+        <a href="/logout/" class="item">退出</a>
+
+    </div>
+</div>
+<div class="ui container">
+    {% block content %}
+    {% endblock %}
+    <div class="ui divider"></div>
+    <div class="ui vertical footer">
+        <div>友情链接：
+            <a href="http://www.baidu.com"> 百度</a> |
+            <a href="http://www.google.com"> Google</a> |
+            <a href="http://www.google.com"> Google</a> |
+            <a href="http://www.google.com"> Google</a> |
+            <a href="http://www.google.com"> Google</a> |
+            <a href="http://www.google.com"> Google</a> |
+        </div>
+        <div style="float: right; height: 50px; line-height: 50px;">Django中国社区 版权所有@2010-2016</div>
+    </div>
+</div>
+</body>
+</html>

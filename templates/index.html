@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}主页{% endblock %}
+{% block content %}
+    <br>
+    <div class="ui segment">
+        <h1 class="ui header">Django 简介</h1>
+        <img class="ui small left floated image" src="{% static 'images/django-logo.png' %}">
+        <p>
+            Django是一个开放源代码的Web应用框架，由Python写成。采用了MVC的框架模式，即模型M，视图V和控制器C。它最初是被开发来用于管理劳伦斯出版集团旗下的一些以新闻内容为主的网站的，即是CMS（内容管理系统）软件。并于2005年7月在BSD许可证下发布。这套框架是以比利时的吉普赛爵士吉他手Django
+            Reinhardt来命名的。</p>
+        <img class="ui small right floated image" src="{% static 'images/django-logo.png' %}">
+        <p>Django(发音：[`dʒæŋɡəʊ]) 是用python语言写的开源web开发框架(open source web
+            framework)，它鼓励快速开发,并遵循MVC设计。Django遵守BSD版权，初次发布于2005年7月, 并于2008年9月发布了第一个正式版本1.0 。</p>
+        <p>由于Django在近年来的迅速发展，应用越来越广泛，被著名IT开发杂志SD Times评选为2013 SD Times 100，位列“API、库和框架”分类第6位，被认为是该领域的佼佼者。</p>
+    </div>
+    <br>
+    <div class="ui divider"></div>
+    <h3 class="navbgcolor header">教程</h3>
+    <div class="ui grid">
+        <div class="three column row">
+            <div class="column">
+                <div class="ui segment">
+                    <img class="ui small left floated image" src="{% static 'images/django-logo.png' %}">
+                    <p>Django教程</p>
+                    <p>jango是一个开放源代码的Web应用框架，由Python写成。采用了MVC的框架模式，即模型M，视图V和控制器C。</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui segment">
+                    <img class="ui small left floated image" src="{% static 'images/flask-logo.png' %}">
+                    <p>Flask教程</p>
+                    <p>jango是一个开放源代码的Web应用框架，由Python写成。采用了MVC的框架模式，即模型M，视图V和控制器C。</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui segment">
+                    <img class="ui small left floated image" src="{% static 'images/tornado-logo.png' %}">
+                    <p>Tornado教程</p>
+                    <p>jango是一个开放源代码的Web应用框架，由Python写成。采用了MVC的框架模式，即模型M，视图V和控制器C。</p>
+                </div>
+            </div>
+        </div>
+        <div class="three column row">
+            <div class="column">
+                <div class="ui segment">
+                    <img class="ui small left floated image" src="{% static 'images/django-logo.png' %}">
+                    <p>jango是一个开放源代码的Web应用框架，由Python写成。采用了MVC的框架模式，即模型M，视图V和控制器C。</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui segment">
+                    <img class="ui small left floated image" src="{% static 'images/flask-logo.png' %}">
+                    <p>jango是一个开放源代码的Web应用框架，由Python写成。采用了MVC的框架模式，即模型M，视图V和控制器C。</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui segment">
+                    <img class="ui small left floated image" src="{% static 'images/tornado-logo.png' %}">
+                    <p>jango是一个开放源代码的Web应用框架，由Python写成。采用了MVC的框架模式，即模型M，视图V和控制器C。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui grid">
+        <div class="two column row">
+            <div class="column">
+                <h3 class="navbgcolor  header">最新博文</h3>
+                <table class="ui small table">
+                    <thead>
+                    <tr>
+                        <th>标题</th>
+                        <th>发布时间</th>
+                        <th>评论人数</th>
+                        <th>作者</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>XXXXXXXX</td>
+                        <td>2017-01-01</td>
+                        <td>100</td>
+                        <td>Lion</td>
+                    </tr>
+                    <tr>
+                        <td>XXXXXXXX</td>
+                        <td>2017-01-01</td>
+                        <td>100</td>
+                        <td>Lion</td>
+                    </tr>
+                    <tr>
+                        <td>XXXXXXXX</td>
+                        <td>2017-01-01</td>
+                        <td>100</td>
+                        <td>Lion</td>
+                    </tr>
+                    <tr>
+                        <td>XXXXXXXX</td>
+                        <td>2017-01-01</td>
+                        <td>100</td>
+                        <td>Lion</td>
+                    </tr>
+                    <tr>
+                        <td>XXXXXXXX</td>
+                        <td>2017-01-01</td>
+                        <td>100</td>
+                        <td>Lion</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="column">
+                <h3 class="navbgcolor  header">热门问答</h3>
+                <table class="ui small table">
+                    <thead>
+                    <tr>
+                        <th>问题</th>
+                        <th>发布时间</th>
+                        <th>回答人数</th>
+                        <th>提问者</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>XXXXXXXX</td>
+                        <td>2017-01-01 17:00:00</td>
+                        <td>100</td>
+                        <td>Lion</td>
+                    </tr>
+                    <tr>
+                        <td>XXXXXXXX</td>
+                        <td>2017-01-01 17:00:00</td>
+                        <td>100</td>
+                        <td>Lion</td>
+                    </tr>
+                    <tr>
+                        <td>XXXXXXXX</td>
+                        <td>2017-01-01 17:00:00</td>
+                        <td>100</td>
+                        <td>Lion</td>
+                    </tr>
+                    <tr>
+                        <td>XXXXXXXX</td>
+                        <td>2017-01-01 17:00:00</td>
+                        <td>100</td>
+                        <td>Lion</td>
+                    </tr>
+                    <tr>
+                        <td>XXXXXXXX</td>
+                        <td>2017-01-01 17:00:00</td>
+                        <td>100</td>
+                        <td>Lion</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <h3 class="navbgcolor  header">学习项目推荐</h3>
+    <div class="ui segment">
+        <div class="ui grid">
+            <div class="three wide column">
+                <img class="ui tiny avatar left floated image" src="{% static 'images/django-logo.png' %}">
+            </div>
+            <div class="ten wide column">
+                <p>Django-REST-Framework是一个开放源代码的Web应用框架，由Python写成。采用了MVC的框架模式，即模型M，视图V和控制器C。</p>
+            </div>
+            <div class="three wide column">
+                <p>收藏人数: 200</p>
+            </div>
+        </div>
+    </div>
+    <div class="ui segment">
+        <div class="ui grid">
+            <div class="three wide column">
+                <img class="ui tiny avatar left floated image" src="{% static 'images/flask-logo.png' %}">
+            </div>
+            <div class="ten wide column">
+                <p>Django-REST-Framework是一个开放源代码的Web应用框架，由Python写成。采用了MVC的框架模式，即模型M，视图V和控制器C。</p>
+            </div>
+            <div class="three wide column">
+                <p>收藏人数: 200</p>
+            </div>
+        </div>
+    </div>
+    <div class="ui segment">
+        <div class="ui grid">
+            <div class="three wide column">
+                <img class="ui tiny avatar left floated image" src="{% static 'images/tornado-logo.png' %}">
+            </div>
+            <div class="ten wide column">
+                <p>Django-REST-Framework是一个开放源代码的Web应用框架，由Python写成。采用了MVC的框架模式，即模型M，视图V和控制器C。</p>
+            </div>
+            <div class="three wide column">
+                <p>收藏人数: 200</p>
+            </div>
+        </div>
+    </div>
+    <div class="ui segment">
+        <div class="ui grid">
+            <div class="three wide column">
+                <img class="ui tiny avatar left floated image" src="{% static 'images/flask-logo.png' %}">
+            </div>
+            <div class="ten wide column">
+                <p>Django-REST-Framework是一个开放源代码的Web应用框架，由Python写成。采用了MVC的框架模式，即模型M，视图V和控制器C。</p>
+            </div>
+            <div class="three wide column">
+                <p>收藏人数: 200</p>
+            </div>
+        </div>
+    </div>
+    <div class="ui segment">
+        <div class="ui grid">
+            <div class="three wide column">
+                <img class="ui tiny avatar left floated image" src="{% static 'images/tornado-logo.png' %}">
+            </div>
+            <div class="ten wide column">
+                <p>Django-REST-Framework是一个开放源代码的Web应用框架，由Python写成。采用了MVC的框架模式，即模型M，视图V和控制器C。</p>
+            </div>
+            <div class="three wide column">
+                <p>收藏人数: 200</p>
+            </div>
+        </div>
+    </div>
+    <div class="ui divider"></div>
+    <h6 class="header">在线人数:688</h6>
+    <div class="ui mini images">
+        <img class="ui avatar image" src="{% static 'images/user.png' %}"/>
+        <img class="ui avatar image" src="{% static 'images/user.png' %}"/>
+        <img class="ui avatar image" src="{% static 'images/user.png' %}"/>
+        <img class="ui avatar image" src="{% static 'images/user.png' %}"/>
+        <img class="ui avatar image" src="{% static 'images/user.png' %}"/>
+        <img class="ui avatar image" src="{% static 'images/user.png' %}"/>
+        <img class="ui avatar image" src="{% static 'images/user.png' %}"/>
+        <img class="ui avatar image" src="{% static 'images/user.png' %}"/>
+        <img class="ui avatar image" src="{% static 'images/user.png' %}"/>
+    </div>
+{% endblock %}
