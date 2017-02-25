@@ -19,26 +19,37 @@
     </style>
 </head>
 <body>
-<div class="ui attached menu">s
+<div class="ui attached menu">
     <div class="header item"><h3><span style="color: #346547;">Testeverything</span></h3></div>
-    <a class="active item" href="/"><i class="home icon"></i> 社区主页 </a>
+    <a class="active item" href="/"><i class="home icon"></i> 主页 </a>
+
+
     <div class="ui simple dropdown item">
         <i class="book icon"></i>
-        文档教程
+        接口
         <i class="dropdown icon"></i>
         <div class="menu">
-            <a class="item"><i class="tag icon"></i>Django教程</a>
-            <a class="item"><i class="tag icon"></i>Flask教程</a>
-            <a class="item"><i class="tag icon"></i>Tornado教程</a>
-            <a class="item"><i class="tag icon"></i>常用第三方库</a>
-            <a class="item"><i class="tag icon"></i>Web基础教学</a>
-            <a class="item"><i class="globe icon"></i>Web安全</a>
+            <a class="item"><i class="tag icon"></i>接口维护</a>
+            <a class="item"><i class="tag icon"></i>接口测试</a>
+            <a class="item"><i class="tag icon"></i>接口mock</a>
+            <a class="item"><i class="tag icon"></i>接口性能压测</a>
         </div>
     </div>
-    <a class="item" href="#"><i class="search icon"></i>问答服务 </a>
-    <a class="item" href="#"><i class="tasks icon"></i>学习项目 </a>
-    <a class="item" href="#"><i class="share alternate icon"></i>技术分享 </a>
-    <a class="item" href="#"><i class="paw icon"></i>社区支持 </a>
+
+    <div class="ui simple dropdown item">
+        <i class="book icon"></i>
+        工具箱
+        <i class="dropdown icon"></i>
+        <div class="menu">
+            <a class="item"><i class="tag icon"></i>http请求</a>
+            <a class="item"><i class="tag icon"></i>Webservice</a>
+            <a class="item"><i class="tag icon"></i>Rest请求</a>
+        </div>
+    </div>
+
+    <a class="item" href="#"><i class="tasks icon"></i>项目 </a>
+    <a class="item" href="#"><i class="share alternate icon"></i>JSON格式化 </a>
+
     <div class="right menu">
         <div class="ui category search item">
             <div class="ui transparent icon input">
@@ -49,9 +60,9 @@
         </div>
         <a class="item">欢迎你，{{ user }}！</a>
         <a href="/logout/" class="item">退出</a>
-
     </div>
 </div>
+
 <div class="ui container">
     {% block content %}
     {% endblock %}
@@ -65,7 +76,7 @@
             <a href="http://www.google.com"> Google</a> |
             <a href="http://www.google.com"> Google</a> |
         </div>
-        <div style="float: right; height: 50px; line-height: 50px;">Django中国社区 版权所有@2010-2016</div>
+        <div style="float: right; height: 50px; line-height: 50px;">lppz 版权所有@2010-2016</div>
     </div>
 </div>
 </body>
