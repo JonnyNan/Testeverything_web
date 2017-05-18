@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from Testeverything.views import index,login,login_action,logout
+from Testeverything.views import index,login,login_action,logout,api_request
 
 
 urlpatterns = [
@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^login_action/', login_action, name='login_action'),
     url(r'^accounts/login/$', login),
-    url(r'^logout/$', logout)
+    url(r'^logout/$', logout),
+    url(r'^request/$', api_request)
 ]

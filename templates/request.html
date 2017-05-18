@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Http请求{% endblock %}
+{% block content %}
+
+    <script type="text/javascript" src="{% static 'js/request.js' %}"></script>
+    <br>
+
+    <div class="ui labeled input">
+        <div class="ui label">http://</div>
+        <input placeholder="mysite.com" type="text" style="width:400px;">
+        <select class="ui dropdown" style="width: auto">
+            <option value="1">Get</option>
+            <option value="0">Post</option>
+        </select>
+    </div>
+
+    <div class="ui buttons">
+        <button class="ui positive button">发送请求</button>
+    </div>
+    <div class="ui toggle checkbox">
+        <input id="requestParameter" type="checkbox" onclick="checkCheckBox();">
+        <label>请求参数</label>
+    </div>
+    <div class="ui toggle checkbox">
+        <input id="requestHead" type="checkbox">
+        <label>请求Header</label>
+    </div>
+
+
+
+{% endblock %}

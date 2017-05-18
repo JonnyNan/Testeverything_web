@@ -32,6 +32,9 @@ def login_action(request):
     else:
         return render(request, 'login.html', {'error': '账号或者密码不正确!'})
 
+@login_required
+def api_request(request):
+    return render(request, 'request.html')
 
 @login_required
 def logout(request):
