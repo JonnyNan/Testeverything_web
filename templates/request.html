@@ -39,13 +39,13 @@
                 $("        <tr class=\"key\">" +
                     "            <td>" +
                     "                <div class=\"ui input\">" +
-                    "                    <input type=\"text\" placeholder=\"参数名称\" style=\"width: 300px\" maxlength=\"100\" class=\"form-control\"" +
+                    "                    <input type=\"text\" placeholder=\"参数名称\" style=\"width: 350px\" maxlength=\"100\" class=\"form-control\"" +
                     "                           name=\"keys\" value=\"\" k=\"\">" +
                     "                </div>" +
                     "            </td>" +
                     "            <td>" +
                     "                <div class=\"ui input\">" +
-                    "                    <input type=\"text\" placeholder=\"参数数值\" style=\"width: 550px;float: left;\" maxlength=\"5000\"" +
+                    "                    <input type=\"text\" placeholder=\"参数数值\" style=\"width: 450px;float: left;\" maxlength=\"5000\"" +
                     "                           class=\"form-control\" name=\"values\" v=\"\" value=\"\">" +
                     "                </div>" +
                     "                <button id=\"deleteParameter\" class=\"ui delete button\" onclick=\"del(this);\" type=\"button\">删除参数</button>" +
@@ -74,6 +74,14 @@
                 "        </tr>").appendTo("#headThead");
         }
 
+        function parameter_exc() {
+            $(" <div class=\"ui form\">     " +
+                "   <div class=\"field\">" +
+                "            <label>参数支持JSON格式，以及GET参数请求方式：</label>" +
+                "            <textarea rows=\"10\" style=\"width: 500px\" placeholder=\"这里可以输入 a=1&b=2类型参数\"></textarea>" +
+                "</div>" +
+                "</div>").appendTo("#parameterTable");
+        }
 
     </script>
 
