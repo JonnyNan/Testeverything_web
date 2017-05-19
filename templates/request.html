@@ -4,6 +4,79 @@
 {% block content %}
 
     <script type="text/javascript" src="{% static 'js/request.js' %}"></script>
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery
+/jquery-1.4.min.js"></script>
+
+
+    <script>
+
+        function del() {
+            $(arguments[0]).parent().parent().remove();
+        }
+
+        $(document).ready(function () {
+            $("#requestParameter").click(function () {
+                if ($("#requestParameter").is(":checked")) {
+                    $("#parameterTable").show();
+                } else {
+                    $("#parameterTable").hide();
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#requestHead").click(function () {
+                if ($("#requestHead").is(":checked")) {
+                    $("#headTable").show();
+                } else {
+                    $("#headTable").hide();
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#addParameter").click(function () {
+                $("        <tr class=\"key\">" +
+                    "            <td>" +
+                    "                <div class=\"ui input\">" +
+                    "                    <input type=\"text\" placeholder=\"参数名称\" style=\"width: 300px\" maxlength=\"100\" class=\"form-control\"" +
+                    "                           name=\"keys\" value=\"\" k=\"\">" +
+                    "                </div>" +
+                    "            </td>" +
+                    "            <td>" +
+                    "                <div class=\"ui input\">" +
+                    "                    <input type=\"text\" placeholder=\"参数数值\" style=\"width: 550px;float: left;\" maxlength=\"5000\"" +
+                    "                           class=\"form-control\" name=\"values\" v=\"\" value=\"\">" +
+                    "                </div>" +
+                    "                <button id=\"deleteParameter\" class=\"ui delete button\" onclick=\"del(this);\" type=\"button\">删除参数</button>" +
+                    "            </td>" +
+                    "        </tr>").appendTo("#parameterThead");
+            });
+
+
+        });
+
+        function add_url_parameter() {
+            $("        <tr class=\"key\">" +
+                "            <td>" +
+                "                <div class=\"ui input\">" +
+                "                    <input type=\"text\" placeholder=\"参数名称\" style=\"width: 300px\" maxlength=\"100\" class=\"form-control\"" +
+                "                           name=\"keys\" value=\"\" k=\"\">" +
+                "                </div>" +
+                "            </td>" +
+                "            <td>" +
+                "                <div class=\"ui input\">" +
+                "                    <input type=\"text\" placeholder=\"参数数值\" style=\"width: 550px;float: left;\" maxlength=\"5000\"" +
+                "                           class=\"form-control\" name=\"values\" v=\"\" value=\"\">" +
+                "                </div>" +
+                "                <button id=\"deleteParameter\" class=\"ui delete button\" onclick=\"del(this);\" type=\"button\">删除参数</button>" +
+                "            </td>" +
+                "        </tr>").appendTo("#headThead");
+        }
+
+
+    </script>
+
     <br>
 
     <div class="ui labeled input">
@@ -19,14 +92,64 @@
         <button class="ui positive button">发送请求</button>
     </div>
     <div class="ui toggle checkbox">
-        <input id="requestParameter" type="checkbox" onclick="checkCheckBox();">
+        <input id="requestParameter" type="checkbox" checked="checked">
         <label>请求参数</label>
     </div>
     <div class="ui toggle checkbox">
-        <input id="requestHead" type="checkbox">
+        <input id="requestHead" type="checkbox" checked="checked">
         <label>请求Header</label>
     </div>
 
+    <table id="parameterTable" class="ui celled table">
+        <thead id="parameterThead">
+        <tr>
+            <th style="width: 30%;">参数名称</th>
+            <th style="width: 70%">参数值</th>
+        </tr>
+        </thead>
 
+        <tbody>
+        <tr>
+            <td colspan="2">
+                <button class="ui positive button" id="addParameter" v="values"
+                        k="keys" type="button">添加参数
+                </button>
+                <button class="ui teal button" onclick="parameter_exc()"
+                        v="values" k="keys" type="button">批量添加（JSON参数）
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table id="headTable" class="ui celled table">
+        <thead id="headThead">
+        <tr>
+            <th style="width: 30%;">Header名称</th>
+            <th style="width: 70%;">Header值</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+            <td colspan="2">
+                <button class="ui positive button" onclick="add_url_parameter(this,'head');"
+                        v="headValues" k="headKeys" type="button">添加参数
+                </button>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <div class="ui form">
+        <div class="field">
+            <label>响应头：</label>
+            <textarea rows="10" style="width: 30%"></textarea>
+
+            <label>响应正文：</label>
+            <textarea rows="15" style="width: 50%"></textarea>
+        </div>
+    </div>
 
 {% endblock %}
