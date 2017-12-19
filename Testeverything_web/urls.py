@@ -15,15 +15,21 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from Testeverything.views import index,login,login_action,logout,api_request
+from Testeverything import views as testeverything_views
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^login/', login, name='login'),
-    url(r'^$', index, name='index'),
-    url(r'^login_action/', login_action, name='login_action'),
-    url(r'^accounts/login/$', login),
-    url(r'^logout/$', logout),
-    url(r'^request/$', api_request)
+    url(r'^login/', testeverything_views.login, name='login'),
+    url(r'^$', testeverything_views.index, name='index'),
+    url(r'^login_action/', testeverything_views.login_action, name='login_action'),
+    url(r'^accounts/login/$', testeverything_views.login),
+    url(r'^logout/$', testeverything_views.logout),
+    url(r'^request/$', testeverything_views.api_request),
+    url(r'^upload_file/$', testeverything_views.upload_file),
+    url(r'^api_test/$', testeverything_views.api_test),
+    url(r'^add_api_test/$', testeverything_views.add_api_test),
+    url(r'^delete_test/(\d+)/$', testeverything_views.delete_test),
+    url(r'^run_api_test/(\d+)/$', testeverything_views.run_api_test),
+
 ]

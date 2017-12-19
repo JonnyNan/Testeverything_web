@@ -1,0 +1,46 @@
+<table class="ui compact celled definition table">
+    <thead>
+    <tr>
+        <th>编号</th>
+        <th>用例名字</th>
+        <th>创建日期</th>
+        <th>用例路径</th>
+        <th>删除用例</th>
+        <th>执行用例</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    {% for apiTestCase in apiTestCaseList %}
+        <tr>
+            <td>
+                {{ apiTestCase.id }}
+            </td>
+            <td>{{ apiTestCase.name }}</td>
+            <td>{{ apiTestCase.create_time }}</td>
+            <td>{{ apiTestCase.case_abspath }}</td>
+            <td>
+                <a class="ui delete button" href="/delete_test/{{ apiTestCase.id }}">删除</a>
+            </td>
+            <td>
+                <a class="ui green button"
+                   href="/run_api_test/{{ apiTestCase.id }}">执行</a>
+                </a>
+
+            </td>
+        </tr>
+
+    {% endfor %}
+    </tbody>
+    <tfoot class="full-width">
+    <tr>
+        <th></th>
+        <th colspan="5">
+            <a class="ui right floated small primary labeled icon button"
+               href="/add_api_test/"> <i class="user icon"></i> 新增用例</a>
+            </a>
+        </th>
+    </tr>
+    </tfoot>
+</table>
