@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}主页{% endblock %}
+{% block content %}
+
+<script type="text/javascript" src="{% static 'js/request.js' %}"></script>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery
+/jquery-1.4.min.js"></script>
+
+
+    下表是你已经上传的用例:<br>
+
+    {% include 'testList.html' %}
+
+
+{% endblock %}

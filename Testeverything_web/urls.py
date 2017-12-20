@@ -31,5 +31,6 @@ urlpatterns = [
     url(r'^add_api_test/$', testeverything_views.add_api_test),
     url(r'^delete_test/(\d+)/$', testeverything_views.delete_test),
     url(r'^run_api_test/(\d+)/$', testeverything_views.run_api_test),
+    url(r'^show_api_result/(\d+)/(.+)/$', testeverything_views.show_api_result),
 
 ]

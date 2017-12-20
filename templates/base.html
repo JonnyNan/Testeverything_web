@@ -3,24 +3,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Testeverything - {% block title %}{% endblock %}</title>
+    <title>良品铺子测试平台 - {% block title %}{% endblock %}</title>
     <link rel="icon" href="{% static 'images/logo.ico' %}"/>
     <link rel="stylesheet" href="{% static 'css/semantic.min.css' %}"/>
     <script type="text/javascript" src="{% static 'js/semantic.min.js' %}"></script>
     <style>
-        .navbgcolor {
-            background-color: #346547;
-            color: #ffffff;
-            height: 40px;
-            line-height: 40px;
-            border-radius: 3px;
-            padding-left: 8px;
-        }
+        {#.navbgcolor {#}
+        {#    background-color: #fab400;#}
+        {#    color: #ffffff;#}
+        {#    height: 40px;#}
+        {#    line-height: 40px;#}
+        {#    border-radius: 3px;#}
+        {#    padding-left: 8px;#}
+        {#}#}
     </style>
 </head>
 <body>
 <div class="ui attached menu">
-    <div class="header item"><h3><span style="color: #346547;">Testeverything</span></h3></div>
+    <div class="header item"><h3><span style="color: #fa6b1d;">良品铺子测试平台</span></h3></div>
     <a class="active item" href="/"><i class="home icon"></i> 主页 </a>
 
 
@@ -43,7 +43,7 @@
         <div class="menu">
             <a class="item" href="/request/"><i class="tag icon"></i>http请求</a>
             <a class="item"><i class="tag icon"></i>Webservice</a>
-            <a class="item"><i class="tag icon"></i>Rest请求</a>
+            <a class="item"><i class="tag icon"></i>dubbo请求</a>
         </div>
     </div>
 
@@ -68,15 +68,15 @@
     {% endblock %}
     <div class="ui divider"></div>
     <div class="ui vertical footer">
-        <div>友情链接：
+        <div>内部链接：
             <a href="http://www.baidu.com"> 百度</a> |
-            <a href="http://www.google.com"> Google</a> |
-            <a href="http://www.google.com"> Google</a> |
-            <a href="http://www.google.com"> Google</a> |
-            <a href="http://www.google.com"> Google</a> |
-            <a href="http://www.google.com"> Google</a> |
+            <a href="http://sns.lppz.com/"> 良品铺子app</a> |
+            <a href="http://www.517lppz.com/"> 良品铺子官网</a> |
+            <a href="http://192.168.32.72:18081/pages/login/login.jsp"> o2ooms后台</a> |
+            <a href="http://jira.lp.com/"> JIRA</a> |
+            <a href="http://jenkins.lp.com/"> Jenkins</a> |
         </div>
-        <div style="float: right; height: 50px; line-height: 50px;">lppz 版权所有@2010-2016</div>
+        <div style="float: right; height: 50px; line-height: 50px;">Copyright © 2017 - LPPZ</div>
     </div>
 </div>
 </body>

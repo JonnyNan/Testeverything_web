@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}创建接口用例{% endblock %}
+{% block content %}
+
+
+
+
+    <br>
+    <h2 class="ui header">上传用例
+        <div class="sub header">HttpRunner目前支持yaml类型的测试用例</div>
+    </h2><br>
+
+    {% include 'uploadFile.html' %}
+
+
+    {% if error != null %}
+        <div class="ui negative message">
+            <i class="close icon"></i>
+            <div class="header">{{ error }}</div>
+            <p>你是不是忘了先添加文件？</p>
+        </div>
+    {% endif %}
+
+    {% if success != null %}
+        <div class="ui success message">
+            <i class="close icon"></i>
+            <div class="header">{{ success }}</div>
+            <p>现在你可以去<b>接口测试</b>里找到该用例了</p>
+        </div>
+    {% endif %}
+
+
+{% endblock %}

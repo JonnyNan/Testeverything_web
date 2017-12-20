@@ -4,7 +4,7 @@
 {% block content %}
     <div class="ui hidden divider"></div>
     <img class="ui centered image ui medium circular image"
-         src="{% static 'images/testeverything.jpg' %}">
+         src="{% static 'images/lppz.jpg' %}">
     <div class="ui text container">
         <div class="ui hidden divider"></div>
 
@@ -28,7 +28,14 @@
                         <br>
                     </div>
                     <button class="ui blue submit button" type="submit">登录</button>
-                    {{ error }}
+                    <br>
+                    {% if error != null %}
+                        <div class="ui negative message">
+                            <i class="close icon"></i>
+                            <div class="header">{{ error }}</div>
+                            <p>没账号请联系管理员</p>
+                        </div>
+                    {% endif %}
                     {% csrf_token %}
                 </form>
             </div>
@@ -41,9 +48,9 @@
             <i class="inbox icon"></i>
             <div class="content">
                 <div class="header">
-                    你有没有听说过这么厉害的测试平台？
+                    提供高品质食品，用美味感动世界
                 </div>
-                <p>致力于打造最好用的测试平台。</p>
+                <p>成为顾客信赖的食品社区和消费入口</p>
             </div>
         </div>
     </div>
